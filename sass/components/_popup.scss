@@ -75,6 +75,10 @@
       margin: 0 auto;
       width: 70%;
     }
+
+    @media only screen and (max-width: 25em) {
+      display: none;
+    }
   }
 
   &__text {
@@ -84,6 +88,12 @@
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
+
+    @include respond(phone) {
+      column-count: 1;
+      column-gap: 0;
+      column-rule: none;
+    }
 
     -moz-hyphens: auto;
     -ms-hyphens: auto;
@@ -114,6 +124,10 @@
       display: inline-block;
       transition: all .2s;
       line-height: 1;
+
+      @media only screen and (max-width: 22em) {
+        top: 4rem;
+      }
     }
 
     &:hover {
